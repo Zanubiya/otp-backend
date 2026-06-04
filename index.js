@@ -35,6 +35,10 @@ app.post("/send-otp", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("OTP Backend is running 🚀");
+});
+
 app.post("/verify-otp", (req, res) => {
   const { email, otp } = req.body;
 
